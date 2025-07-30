@@ -10,26 +10,27 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <nav className="lg:mb-16 mb-12 py-5">
-      <div className="flex flex-col md:flex-row md:items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="text-3xl font-semibold">
-            {metaData.title}
-          </Link>
-        </div>
-        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
-          {Object.entries(navItems).map(([path, { name }]) => (
-            <Link
-              key={path}
-              href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
-            >
-              {name}
+    <div className="vertical table w-full mb-5 z-[800]">
+      <div className="topmenubar-toptext bg-neutral-800 text-white opacity-90 h-[110px]">
+        <div className="topmenubar-inner w-[80%] max-w-[900px] min-w-[480px] mx-auto relative">
+          <div className="yiningkarlli absolute top-[60px] left-[95px] text-[30px] font-medium uppercase z-[1100]">
+            <Link href="/" className="nav text-white no-underline hover:text-red-500">
+              Matthew Sun
             </Link>
-          ))}
-          <ThemeSwitch />
+          </div>
+          <div className="codeandvisuals absolute top-[1px] text-[60px] font-medium uppercase z-[1100]">
+            <Link href="/blog" className="nav text-white no-underline hover:text-red-500">
+              Code & Visuals
+            </Link>
+          </div>
+          <div className="topmenu absolute top-[69px] right-0 text-[20px] font-light text-right">
+            <Link className="nav" href="/blog">Blog</Link> |{" "}
+            <Link className="nav" href="/archive">Archive</Link> |{" "}
+            <Link className="nav" href="/projects">Projects</Link> |{" "}
+            <Link className="nav" href="/about">About</Link>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }

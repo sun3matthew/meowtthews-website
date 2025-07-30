@@ -1,90 +1,105 @@
+/* === Import Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+
+/* === Tailwind CSS Setup === */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import "./components/tweet.css";
 
+/* === Dark Mode Variant === */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* === Text Selection Color === */
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
 }
 
-/* Light theme colors */
-:root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+/* === Global HTML & Body Styles === */
+html,
+body {
+  height: 100%;
 }
 
-/* Dark theme colors */
-.dark {
-  background-color: #111010;
-  --sh-class: #4c97f8;
-  --sh-identifier: white;
-  --sh-sign: #8996a3;
-  --sh-string: #0fa295;
-  --sh-keyword: #f47067;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
-}
 
 html {
   min-width: 360px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #555;
+  background-color: #fff;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Typography (Einheitsgrafik Style) === */
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .topmenu {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.subtitle {
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.subtitle-frontpage {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+pre, code, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+  color: #555;
+}
+
+/* === Tailwind Typography Plugin Overrides === */
 .prose {
-  @apply text-[#000000] dark:text-[#FFFFFF];
+  @apply text-[#555555] dark:text-white;
+  font-family: 'DM Sans', sans-serif !important;
 }
 
-.prose .anchor {
-  @apply absolute invisible no-underline;
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
+.prose h2, .prose h3, .prose h4 {
+  @apply font-medium;
 }
 
-.anchor:hover {
-  @apply visible;
+.prose strong {
+  @apply font-medium;
 }
 
 .prose a {
-  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em] font-normal text-[#000000] dark:text-[#FFFFFF];
+  @apply font-normal transition-all underline decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  color: red;
 }
 
 .prose a:hover {
   @apply dark:decoration-neutral-400 decoration-neutral-600;
-}
-
-.prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
-  content: "#";
-}
-
-.prose *:hover > .anchor {
-  @apply visible;
+  color: gray;
+  text-decoration: underline;
 }
 
 .prose pre {
-  @apply bg-[#F7F7F7] dark:bg-[#181818] rounded-lg overflow-x-auto;
+  @apply bg-[#f8f8f8] dark:bg-[#181818] rounded-lg overflow-x-auto;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg;
+  @apply px-1 py-0.5 rounded;
 }
 
 .prose pre code {
   @apply p-0;
-  border: initial;
+  border: none;
   line-height: 1.5;
 }
 
@@ -93,66 +108,137 @@ html {
 }
 
 .prose img {
-  /* Don't apply styles to next/image */
   @apply m-0;
-}
-
-.prose h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-medium;
-}
-
-.prose strong {
-  @apply font-medium;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .prose > :first-child {
-  /* Override removing top margin, causing layout shift */
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
 
-.prose-quoteless blockquote p:first-of-type::before,
-.prose-quoteless blockquote p:first-of-type::after {
-  content: none;
+/* === Layout === */
+.content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
-pre::-webkit-scrollbar {
-  display: none;
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+/* === Links === */
+a {
+  color: red;
+  text-decoration: none;
+  text-underline-offset: 2px;
 }
 
-/* Remove Safari input shadow on mobile */
-input[type="text"],
-input[type="email"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+a:hover {
+  color: gray;
+  text-decoration: underline;
 }
 
-.prose .tweet a {
-  text-decoration: inherit;
-  font-weight: 500;
+a.nav {
+  color: white;
 }
 
-table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
+a.nav:hover {
+  color: red;
+  text-decoration: underline;
 }
 
-.prose .callout > p {
-  margin: 0;
+/* === Footer === */
+.site-footer {
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  margin: 30px auto 0 auto;
+  padding: 30px 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 900px;
 }
 
-.title {
-  text-wrap: balance;
+.site-footer a {
+  color: #888;
+}
+
+.site-footer a:hover {
+  color: #FF0000;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-transform: uppercase;
+}
+
+/* === Responsive Media === */
+@media only screen and (max-width: 800px) {
+  .subtitle {
+    font-size: 1.2em;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content,
+  .site-footer {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/* === Embeds === */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-container-square {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container-square iframe,
+.embed-container-square object,
+.embed-container-square embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

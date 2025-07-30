@@ -73,22 +73,29 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-12">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[624px] w-full">
-            <Navbar />
-            {children}
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </main>
-        </ThemeProvider>
-      </body>
+    <body className="min-h-screen flex flex-col bg-white text-[#555]">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <header id="site-head">
+          <Navbar />
+        </header>
+
+        <main className="flex-grow w-[90%] max-w-[1600px] min-w-[320px] mx-auto">
+          {children}
+        </main>
+
+        <footer className="w-[80%] max-w-[900px] min-w-[300px] mx-auto mt-8 py-6 text-[17px] leading-[1.4]">
+          <Footer />
+        </footer>
+
+        <Analytics />
+        <SpeedInsights />
+      </ThemeProvider>
+    </body>
     </html>
   );
 }
