@@ -18,7 +18,8 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-medium">Matthew Sun</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          This is a test.   
+          Under Construction.
+          Upgrading from just a bunch of static pages to static pages with js.
         </p>
       </div>
     </section>
