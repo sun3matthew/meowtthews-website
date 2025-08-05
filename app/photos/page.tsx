@@ -15,57 +15,61 @@ export default function Photos() {
         columns={3}
         images={[
           {
-            src: "/photos/photo1.jpg",
-            alt: "Roman columns",
-            href: "https://unsplash.com/photos/people-walking-near-building-during-daytime-dFLBDQQeffU?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
+            src: "/photos/12: Childhood Fears.png",
+            alt: "Childhood Fears",
           },
           {
-            src: "/photos/photo2.jpg",
-            alt: "Big Ben",
-            href: "https://unsplash.com/photos/big-ben-london-MdJq0zFUwrw?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
+            src: "/photos/3: Visions of Ice - 3.png",
+            alt: "Visions of Ice - 3",
           },
           {
-            src: "/photos/photo3.jpg",
-            alt: "Sacré-Cœur Basilica",
-            href: "https://unsplash.com/photos/a-view-of-the-inside-of-a-building-through-a-circular-window-Tp-3hrx88J4",
+            src: "/photos/6: Crow Fall.png",
+            alt: "Crow Fall",
           },
           {
-            src: "/photos/photo4.jpg",
-            alt: "Eiffel Tower",
-            href: "https://unsplash.com/photos/the-eiffel-tower-towering-over-the-city-of-paris-OgPuPvPsHLM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
+            src: "/photos/8: Dreams of Home.png",
+            alt: "Dreams of Home",
           },
           {
-            src: "/photos/photo5.jpg",
-            alt: "Taj Mahal",
-            href: "https://unsplash.com/photos/taj-mahal-india-IPlPkWPJ2fo",
+            src: "/photos/IMG_0764.PNG",
+            alt: "Photo IMG_0764",
           },
           {
-            src: "/photos/photo6.jpg",
-            alt: "Colosseum",
-            href: "https://unsplash.com/photos/brown-concrete-building-under-blue-sky-during-daytime-3cyBR1rIJmA?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
+            src: "/photos/IMG_1953 2.jpg",
+            alt: "Photo IMG_1953",
           },
-        ]}
-      />
-
-      <ImageGrid
-        columns={2}
-        images={[
-          { src: "/photos/photo1.jpg", alt: "Roman columns" },
-          { src: "/photos/photo2.jpg", alt: "Big Ben" },
-          { src: "/photos/photo3.jpg", alt: "Sacré-Cœur Basilica" },
-          { src: "/photos/photo4.jpg", alt: "Eiffel Tower" },
-        ]}
-      />
-
-      <ImageGrid
-        columns={4}
-        images={[
-          { src: "/photos/photo1.jpg", alt: "Roman columns" },
-          { src: "/photos/photo2.jpg", alt: "Big Ben" },
-          { src: "/photos/photo3.jpg", alt: "Sacré-Cœur Basilica" },
-          { src: "/photos/photo4.jpg", alt: "Eiffel Tower" },
-          { src: "/photos/photo5.jpg", alt: "Taj Mahal" },
-          { src: "/photos/photo6.jpg", alt: "Colosseum" },
+          {
+            src: "/photos/IMG_3014.JPG",
+            alt: "Photo IMG_3014",
+          },
+          {
+            src: "/photos/IMG_4348.png",
+            alt: "Photo IMG_4348",
+          },
+          {
+            src: "/photos/IMG_4387.png",
+            alt: "Photo IMG_4387",
+          },
+          {
+            src: "/photos/IMG_4393.png",
+            alt: "Photo IMG_4393",
+          },
+          {
+            src: "/photos/IMG_4557.png",
+            alt: "Photo IMG_4557",
+          },
+          {
+            src: "/photos/IMG_4596.png",
+            alt: "Photo IMG_4596",
+          },
+          {
+            src: "/photos/asdf.png",
+            alt: "Photo asdf",
+          },
+          {
+            src: "/photos/out.png",
+            alt: "Photo out",
+          },
         ]}
       />
     </section>

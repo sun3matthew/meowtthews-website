@@ -1,0 +1,3 @@
+[submodule "deprecated/old-website"]
+	path = deprecated/old-website
+	url = https://github.com/sun3matthew/meowtthews-static-website.git

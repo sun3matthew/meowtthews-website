@@ -1,0 +1,50 @@
+---
+title: "Destined to Die"
+description: "A task managing game attempting to depict mental health struggles during COVID quarantine"
+tech: ["Unity", "C#", "Art Direction", "Woodblock Printing", "Automation"]
+status: "Finished"
+year: "2021"
+image: "/project-images/destined-to-die.jpg"
+---
+
+# Destined to Die - Project - Finished
+
+[GitHub](https://github.com/sun3matthew/Destined-To-Die.git) | [Steam](https://store.steampowered.com/app/1673740/Destined_to_Die/)
+
+## What is this game?
+
+A task managing game attempting to depict mental health struggles such as depression and self harm during the COVID quarantine. There is a priority on creating beautiful scenes, giving a sense of tranquility and purpose to live scattered in between depressive episodes. Artistic expression was a key part of building this game, attempting to show my interpretation of mental health through creative usage of mediums and audio.
+
+## Artistic direction
+
+A feeling of tranquility and sense that there is more to life, specifically in the context of those moments of quiet that brings ease to life. Contrasted against this, I wanted to capture depressive episodes as a direct opposite to this.
+
+![Scenic scene of japan](/project-images/destined-scene.webp)
+*Scenic scene of japan.*
+
+![Postcard in the game](/project-images/zen-postcard.jpg)
+*Postcard in the game.*
+
+![Cutscene from the game](/project-images/rose-cutscene.png)
+*Cutscene from the game.*
+
+## TODOs
+
+- Cutscene Pipeline
+- NPC Skeletal Animation
+- Virtual Desktop
+
+## Cutscene Pipeline
+
+The game has 200 cutscenes created by hand through woodblock printmaking. Through experimentation, I settled on the current look of the cutscenes. The process required me to first carve out a block, then print it 5 seperate times. Then after this I photographed the 5 pictures and then cropping and lining them up in photoshop. Then turning it into a gif and displaying it on a CRT tv, through a hdmi to av adapter. With a low exposure time, I had the camera take 30 photos in sequence. Then I would take these 30 photos and turn them into a mp4 after applying image effects to all of them.
+
+By hand, the carving and printing per cutscenes took 20-40 minutes. But the processing afterwards took 30 minutes to a hour per cutscenes caused by all the aligning and sim card swapping. This forced my to create a system to automate the entire process. Where the first step of taking the photos was around 80% automated, every other step was fully automated. I just had to setup the tv and camera and leave for three hours to process 20 scenes. Saving me many hundreds of hours and sanity.
+
+## NPC Skeletal Animation
+
+The game had around 12 NPCs that you could interact with. After creating a walk animation for the main character, I realized that the walk animations for the other 12 characters would take a enormous amount of time to draw. The quality and consistency of the animations would also vary over time.
+To resolve this, I created a tool where I fed in a general skeletal animation, where it had bones for the head, body, arms, legs and feet. Then with a pallet that contained all the "body parts", it would correctly rotate it and apply it to the skeleton. With a very good base skeleton, I was able to create reasonably good looking isometric walk animations for all of the NPCs.
+
+## Virtual Desktop
+
+Building a virtual desktop for the game was a chance for me to tackle a small architectural design problem. With my knowledge of inheritance, I was able to build a very interactive desktop, where the underlying code remained clean. This was one of the first major code structure problems that I had tackled and it began my knowledge of proper code architecture.

@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang="en" className={`${inter.className} bg-gradient-to-br from-rose-50 via-blue-50 to-purple-50`} suppressHydrationWarning>
       <head>
         <link
           rel="alternate"
@@ -73,24 +73,24 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-    <body className="min-h-screen flex flex-col bg-white text-[#555]">
+    <body className="bg-gradient-to-br from-rose-50 via-blue-50 to-purple-50" suppressHydrationWarning>
       <ThemeProvider
         attribute="class"
-        defaultTheme="system"
-        enableSystem
+        defaultTheme="light"
+        enableSystem={false}
         disableTransitionOnChange
       >
-        <header id="site-head">
-          <Navbar />
-        </header>
+        <div className="min-h-screen flex flex-col bg-gradient-to-br from-rose-50 via-blue-50 to-purple-50">
+          <header id="site-head">
+            <Navbar />
+          </header>
 
-        <main className="flex-grow w-[90%] max-w-[1600px] min-w-[320px] mx-auto">
-          {children}
-        </main>
+          <main className="flex-grow">
+            {children}
+          </main>
 
-        <footer className="w-[80%] max-w-[900px] min-w-[300px] mx-auto mt-8 py-6 text-[17px] leading-[1.4]">
           <Footer />
-        </footer>
+        </div>
 
         <Analytics />
         <SpeedInsights />
