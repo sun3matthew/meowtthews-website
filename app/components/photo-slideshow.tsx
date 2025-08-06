@@ -20,13 +20,13 @@ const slides = [
   {
     src: '/banners/sphere-new-years-2.png', 
     alt: 'Sphere Tools - Environment',
-    caption: 'One of many project utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
+    caption: 'One of many projects utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
     link: '/projects/sphere-tools'
   },
   {
     src: '/banners/sphere-drone.jpg',
     alt: 'Sphere Tools',
-    caption: 'A <a href="/projects/sphere-tools">drone pre-visualization tool</a> I built for our digital twin, converting drone flight files to Niagra particle systems.',
+    caption: 'A <a href="/projects/sphere-tools">drone pre-visualization tool</a> I built for our digital twin, converting drone flight files to Niagara particle systems.',
     link: '/projects/sphere-tools'
   },
   {
