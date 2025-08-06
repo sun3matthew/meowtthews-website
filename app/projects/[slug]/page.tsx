@@ -76,7 +76,7 @@ export default function Project({ params }) {
       />
       
       {project.metadata.image && (
-        <div className="relative w-full h-64 md:h-96 mb-8 overflow-hidden rounded-lg shadow-xl">
+        <div className="relative w-full h-64 md:h-96 mb-8 overflow-hidden shadow-xl">
           <Image
             src={project.metadata.image}
             alt={project.metadata.title}
@@ -87,7 +87,7 @@ export default function Project({ params }) {
         </div>
       )}
 
-      <div className="bg-white/70 backdrop-blur-sm shadow-xl p-8 md:p-12 border border-white/20 rounded-lg">
+      <div className="bg-white/70 backdrop-blur-sm shadow-xl p-8 md:p-12 border border-white/20">
         <article className="prose prose-slate max-w-none prose-headings:text-slate-700 prose-p:text-slate-600 prose-p:leading-relaxed prose-a:text-rose-500 prose-a:no-underline hover:prose-a:text-rose-600 prose-strong:text-slate-700 prose-code:text-slate-700 prose-code:bg-slate-100 prose-pre:bg-slate-50 prose-pre:border prose-pre:border-slate-200">
           <CustomMDX source={project.content} />
         </article>

@@ -3,29 +3,27 @@ title: "The Lonely Tree"
 description: "OpenGL game engine development with grass rendering systems and artistic direction"
 tech: ["OpenGL", "C++", "GLSL", "Art Direction"]
 status: "WIP"
-year: "2020"
-image: "/project-images/the-lonely-tree.png"
+year: "2024 - 2025"
+image: "/banners/grass-2.png"
 ---
 
 # The Lonely Tree - Project - WIP
 
-[GitHub](https://github.com/sun3matthew/TheLonelyTree.git)
-
 ## What is this game?
 
-The game is less of a game and more of a "experience". I don't plan to add any gameplay mechanics. The game will allow you to write and add diary entries, though less diary and more "important events" that occur throughout your life. While you add these, each entry becomes a node on a tree as it slowly grows up in a line. When your entry title ever matches to someone elses entry title, some of their tree will start to grow and branch off of yours. As you add more and more to your tree, you can read and connect with all the other anonymous people whom had similar experiences. You start of as a tiny sapling on a hill in a vast meadow, and eventually growing into a massive tree, alone in the meadow but connected to all.
+The game is less of a game and more of a "experience". I don't plan to add any gameplay mechanics. The game will allow you to write and add diary entries, though less diary and more "important events" that occur throughout your life. While you add these, each entry becomes a node on a tree as it slowly grows up in a line. When your entry title ever matches to someone elses entry title, some of their tree will start to grow and branch off of yours. As you add more and more to your tree, you can read and connect with all the other anonymous people whom had similar experiences. You start off as a tiny sapling on a hill in a vast meadow, and eventually growing into a massive tree, alone in the meadow but connected to all.
 
 ## Why?
 
-A exploration outside the world of Unity 2D pixel art games. Applying what I had learned from my intro to computer graphics course and running with it while diving even deeper. I have always wanted to build my own game engine from scratch for many reasons and now this is my chance to do so. I spend quite a bit of time trying to figure out how "low-level" I wanted to go, in the beginning I was going to go with bgfx but I to really learn how things work all the way down to the gpu. Therefore my immediate new thought was to build my own version of OpenGL. Then I realized I am not there yet and actually wanted to be able to render a black screen within this year so I decided to settle with OpenGL.
+An exploration outside the world of Unity 2D pixel art games. Applying what I had learned from my intro to computer graphics course and running with it while diving even deeper. I have always wanted to build my own game engine from scratch for many reasons and now this is my chance to do so. I spent quite a bit of time trying to figure out how "low-level" I wanted to go, in the beginning I was going to go with bgfx but I wanted to really learn how things work all the way down to the GPU. Therefore my immediate new thought was to build my own version of OpenGL. Then I realized I am not there yet and actually wanted to be able to render a black screen within this year so I decided to settle with OpenGL.
 
-The plan was to get through a couple chapters of [LearnOpenGL](https://learnopengl.com) while learning how to correctly setup a build system and project structure. Then from there I would just go for it and try to build out a game engine derived from my understanding of how the Unity game engine worked while heavily simplifying it. Then take as much time as I needed to experiment with creating a visually stunning scene that was also able to be run on average laptop. Finally I would spend the time crafting the rest of the content for the game, make sure it continues to align with my artistic direction. Hey, I'm a artist too at heart.
+The plan was to get through a couple chapters of [LearnOpenGL](https://learnopengl.com) while learning how to correctly set up a build system and project structure. Then from there I would just go for it and try to build out a game engine derived from my understanding of how the Unity game engine worked while heavily simplifying it. Then take as much time as I needed to experiment with creating a visually stunning scene that was also able to be run on average laptop. Finally I would spend the time crafting the rest of the content for the game, make sure it continues to align with my artistic direction. Hey, I'm an artist too at heart.
 
 ## Artistic direction
 
 I have two feelings I want to capture.
 
-The first is the feeling of hiking alone and walking through a endless grass meadow. The second is feeling of calmness and serenity during the hours of sunset. Basically, grass and sunsets.
+The first is the feeling of hiking alone and walking through an endless grass meadow. The second is a feeling of calmness and serenity during the hours of sunset. Basically, grass and sunsets.
 
 ![The grass meadows from The Ghost of Tsushima](/project-images/tlt-art1.jpg)
 *The grass meadows from The Ghost of Tsushima.*
@@ -42,6 +40,7 @@ The first is the feeling of hiking alone and walking through a endless grass mea
 - Cloud Rendering
 - Weather Rendering
 - Procedural Tree Generation
+- Conversion to Vulkan
 - UI Font Rendering
 - Database
 - Flora and Fauna
@@ -50,19 +49,29 @@ The first is the feeling of hiking alone and walking through a endless grass mea
 
 I have learned over time how to setup a project structure according to industry standards. But I have never had to setup one that was like this. I'm going to need to take some time continuing to learn the industry standards and what works the best for my project. Currently the build system uses cmake and the project structure is derived from the different project structures I've seen from other github repos. I think at this point the project structure and build system has mostly stabilized to a point where I'm using git submodules and no longer need to rebase my mistakes away.
 
-The OpenGL projects was fairly easy to follow, re-learning how to debug seg-faults was "fun" and it was even more "fun" learning how to debug shader code. One thing that I really didn't like about OpenGL was that it used AssImp for 3D model loading and it was too heavy for me. I ended up using tinyGLTF instead. It was a bit of effort learning how to tinyGLTF instead and converting from PBR to Blinn-phong.
+The OpenGL project was fairly easy to follow, re-learning how to debug seg-faults was "fun" and it was even more "fun" learning how to debug shader code. One thing that I really didn't like about OpenGL was that it used AssImp for 3D model loading and it was too heavy for me. I ended up using tinyGLTF instead. It was a bit of effort learning how to use tinyGLTF instead and converting from PBR to Blinn-phong.
 
 ## Game Engine Creation
 
-I made sure to create a Game Engine that was very modular while also being optimized for the exact game I wanted to make as it's not like this game engine will be used for anything else. The design was going a mix of abstraction and specialization. Another priority was to make sure that the compile times were not crazy long (one of the reasons I didn't like AssImp). My sanity had been drained so much with debugging in Unity and Unreal where it took 8 seconds to compile and load killed me. It was just enough time where I had to just sit there and wait not not enough time where I had enough time to keep thinking about the problem or implement/work on something else. Outside of this there is not that much more to talk about, I'm still working on it.
+I made sure to create a Game Engine that was very modular while also being optimized for the exact game I wanted to make as it's not like this game engine will be used for anything else. The design was a mix of abstraction and specialization. Another priority was to make sure that the compile times were not crazy long (one of the reasons I didn't like AssImp). My sanity had been drained so much with debugging in Unity and Unreal where it took 8 seconds to compile and load that killed me. It was just enough time where I had to just sit there and wait but not enough time where I had enough time to keep thinking about the problem or implement/work on something else. Outside of this there is not that much more to talk about, I'm still working on it.
 
 ## Art Direction
 
-I'm staying with blinn-phong shading as I feel that I can reach my artistic direction without a more computationally expensive method such as PBR. I wanted a infinite field of grass that stretched out as far as the eye could see. I wasn't able to do this while keeping a reasonable frame rate for non-gaming computers. Instead compromising on having good looking dense grass and changing the setting to a island surrounded by a infinite plane of water. A change in the art direction but IMO a change in a positive way by being more closely aligned with the feeling of loneliness I want to capture. WIP on keeping art direction.
+I'm staying with blinn-phong shading as I feel that I can reach my artistic direction without a more computationally expensive method such as PBR. I wanted an infinite field of grass that stretched out as far as the eye could see. I wasn't able to do this while keeping a reasonable frame rate for non-gaming computers. Instead I compromised on having good looking dense grass and changing the setting to an island surrounded by an infinite plane of water. A change in the art direction but IMO a change in a positive way by being more closely aligned with the feeling of loneliness I want to capture. WIP on keeping art direction.
 
-## Grass Rendering
+## Grass Shader
 
-Created a terrain mesh generation. Reading [Outerra Blog Posts](https://outerra.blogspot.com/2012/05/procedural-grass-rendering.html) and adapting [Ghost of Tsushima's System](https://www.youtube.com/watch?v=Ibe1JBF5i5Y) for grass rendering. Ghost of Tsushima uses a chunk system with the grass mesh being generated via a compute shader then passed to a vertex and fragment shader. Since Apple deprecated OpenGL and does not support 4.3, I do not have compute shaders. After tinkering with porting the engine to use Vulkan, I decided I did not want to waste a month learning Vulkan right now and tried to fix the problem in other ways. My system uses the geometry shader to generate the grass blades. The vertex shader takes in a set of points that specify grass positions. Using Ghost of Tsushima methods, I calculated metadata for each vertex such as tilt direction, bezier curve info, clump info and more. This is then passed to the geometry where it generates a triangle strip of vertices using the information, then passed to the fragment shader. Through these shaders, other features such as Level of Detail, Crude Normal Mapping and Frustum Culling is implemented.
+The grass was implemented through a geometry shader that would take in grass seeds and extrude quad grass blades. For each grass seed, information including wind direction, wind speed, grass height, and grass color was passed to the geometry shader. The geometry shader would then procedurally generate grass blades with the wind effects applied to create realistic grass movement.
+
+Special care was taken to create grass that felt alive and natural. By adjusting the wind parameters and grass density, different grass fields could convey different moods and feelings, supporting the artistic direction of the project.
+
+![Early grass development](/project-images/the-lonely-tree.png)
+*Early development of grass.*
+
+![Grass swept planes](/project-images/grass2.png)
+*Grass swept planes.*
+
+## Shadows
 
 ![Early development of grass](/project-images/the-lonely-tree.png)
 *Early development of grass*
@@ -70,17 +79,23 @@ Created a terrain mesh generation. Reading [Outerra Blog Posts](https://outerra.
 ![Grass Swept Planes](/project-images/grass2.png)
 *Grass Swept Planes*
 
+TODO - Update
+
 ## Cloud Rendering
 
-Created volumetric cloud rendering. - WIP
+TODO - Write blog post
 
 ## Weather Rendering
 
-WIP
+TODO - Write blog post
 
 ## Procedural Tree Generation
 
-WIP
+TODO - Write blog post
+
+## Conversion to Vulkan
+
+TODO - Write blog post
 
 ## UI Font Rendering
 
@@ -88,8 +103,9 @@ WIP
 
 ## Database
 
-WIP
+TODO - Write blog post
+
 
 ## Flora and Fauna
 
-WIP
+TODO - Write blog post

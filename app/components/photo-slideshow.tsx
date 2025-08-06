@@ -6,35 +6,41 @@ import Link from 'next/link';
 
 const slides = [
   {
-    src: '/project-images/sphere.jpg',
-    alt: 'Sphere Tools',
-    caption: 'Procedural art creation and artist tool development for the <a href="/projects/sphere-tools">Las Vegas Sphere</a>.',
+    src: '/banners/sphere-dead.webp', 
+    alt: 'Sphere Tools - Environment',
+    caption: 'A project that I worked on for Grateful Dead\'s residency at the <a href="/projects/sphere-tools">Sphere</a>. I helped build many asset importers for C4D.',
     link: '/projects/sphere-tools'
   },
   {
-    src: '/project-images/destined-to-die.jpg', 
-    alt: 'Destined to Die',
-    caption: 'A narrative-driven game exploring themes of mortality and choice in a procedural <a href="/projects/destined-to-die">fantasy world</a>.',
-    link: '/projects/destined-to-die'
-  },
-  {
-    src: '/project-images/the-lonely-tree.png',
+    src: '/banners/grass-1.jpg',
     alt: 'The Lonely Tree', 
-    caption: 'OpenGL game engine with custom grass rendering and <a href="/projects/the-lonely-tree">zen artistic direction</a>.',
+    caption: 'A screenshot from my <a href="/projects/the-lonely-tree">game</a> built using Vulkan, showing stylized volumetric cloud rendering and real-time grass rendering.',
     link: '/projects/the-lonely-tree'
   },
   {
-    src: '/project-images/water-rain.jpg',
-    alt: 'Water Rain',
-    caption: 'Fluid dynamics simulation exploring <a href="/projects/water-rain">procedural water effects</a> and particle systems.',
-    link: '/projects/water-rain'
+    src: '/banners/sphere-new-years-2.png', 
+    alt: 'Sphere Tools - Environment',
+    caption: 'One of many project utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
+    link: '/projects/sphere-tools'
   },
   {
-    src: '/project-images/gameboy-development.png',
-    alt: 'Gameboy Development',
-    caption: 'Assembly programming and ROM hacking for <a href="/projects/gameboy-development">Game Boy Color development</a>.',
-    link: '/projects/gameboy-development'
-  }
+    src: '/banners/sphere-drone.jpg',
+    alt: 'Sphere Tools',
+    caption: 'A <a href="/projects/sphere-tools">drone pre-visualization tool</a> I built for our digital twin, converting drone flight files to Niagra particle systems.',
+    link: '/projects/sphere-tools'
+  },
+  {
+    src: '/banners/grass-3.png',
+    alt: 'Environmental Graphics',
+    caption: 'A screenshot from my <a href="/projects/the-lonely-tree">game</a> built in Vulkan, showcasing a field of highly dynamic grass and flowers rendered in real-time.',
+    link: '/projects/the-lonely-tree'
+  },
+  {
+    src: '/banners/sphere-pi-2.png',
+    alt: 'Technical Art',
+    caption: 'A project that I worked on for <a href="/projects/sphere-tools">Sphere</a> that combined my love for Math, Art and Programming.',
+    link: '/projects/sphere-tools'
+  },
 ];
 
 export default function PhotoSlideshow() {

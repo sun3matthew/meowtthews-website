@@ -3,7 +3,7 @@ title: "Gameboy Development"
 description: "Homebrew Gameboy Color ASM development exploring low-level programming"
 tech: ["Assembly", "Gameboy Hardware", "Low-level Programming"]
 status: "Archived"
-year: "2019"
+year: "2024"
 image: "/project-images/gameboy-development.png"
 ---
 
@@ -13,7 +13,7 @@ image: "/project-images/gameboy-development.png"
 
 ## Homebrew Gameboy Color ASM
 
-My older cousin left me his gameboy color back in 2009 when I was 6 years old. I only had one game on it, Pokemon Gold. I just remember that I would always sneak that game into my bedroom at night and play with a little light to see the non backlit screen. I never completed the game though, partly because I was bad but mainly because the little battery inside the cartridge that kept the save ram alive died. Either way I wanted to revisit that phase of my life and see what it's like developing games in the 1990s.
+My older cousin left me his Game Boy Color back in 2009 when I was 6 years old. I only had one game on it, Pokemon Gold. I just remember that I would always sneak that game into my bedroom at night and play with a little light to see the non-backlit screen. I never completed the game though, partly because I was bad but mainly because the little battery inside the cartridge that kept the save RAM alive died. Either way I wanted to revisit that phase of my life and see what it's like developing games in the 1990s.
 
 ## Why...?
 
@@ -28,26 +28,26 @@ I can try my best to justify this and talk about how it will make me a better pr
 - Stack Memory
 - Malloc and Free
 
-## Learn how the gameboy worked
+## Learn how the Game Boy worked
 
-I had printed out the specs from the [gbDev pandocs](https://gbdev.io/pandocs/About.html) and spent a week of late nights just reading and annotating it. From start to end. It was one of the most enjoyable college experiences, staying up in the dorm lounges peacefully reading about technology invented a decade before I was born. I was extremely fun and informative learning about the early to many solutions to problems I take for granted as well as solutions to problems that no longer exist. Taking notes and keeping track of op-code tables and interrupt-codes was one of the most frustrating and rewarding parts of the learning process.
+I had printed out the specs from the [gbDev pandocs](https://gbdev.io/pandocs/About.html) and spent a week of late nights just reading and annotating it. From start to end. It was one of the most enjoyable college experiences, staying up in the dorm lounges peacefully reading about technology invented a decade before I was born. It was extremely fun and informative learning about the early solutions to many problems I take for granted as well as solutions to problems that no longer exist. Taking notes and keeping track of op-code tables and interrupt-codes was one of the most frustrating and rewarding parts of the learning process.
 
 ## Writing Roms
 
-I had to make sure the rom files I wrote could be run on my gameboy. There existing emulators had higher tolerances for the correctness of the header for the rom. After a week of reading and coding, finally seeing the rom I had wrote run on a custom cartridge I could write to display a hello world was euphoric.
+I had to make sure the ROM files I wrote could be run on my Game Boy. The existing emulators had higher tolerances for the correctness of the header for the ROM. After a week of reading and coding, finally seeing the ROM I had written run on a custom cartridge I could write to display a hello world was euphoric.
 Although my friends did not understand the sheer magnitude of the coolness of a static picture of a "Hello World" created in assembly, it felt awesome in my heart.
 
 ## Multiplication and Division
 
-Back when I was learning Java in high school, I was trying to create a .wav reader and writer. I was having trouble correctly loading the file in, I asked my father whom was an electrical engineer for help. Little did I know I unleashed a nerd in him whom proceeded to explain how audio compression worked for the next two hours. At some point we got into bit shifting and how you could divide and multiply numbers by two by shifting right or left a bit. He went on about how much more efficient it was to structure data in a way where you only had to ever work with values that were multiples of 2. At that time, I had no idea what in the world he was talking about.
+Back when I was learning Java in high school, I was trying to create a .wav reader and writer. I was having trouble correctly loading the file in, I asked my father who was an electrical engineer for help. Little did I know I unleashed a nerd in him who proceeded to explain how audio compression worked for the next two hours. At some point we got into bit shifting and how you could divide and multiply numbers by two by shifting right or left a bit. He went on about how much more efficient it was to structure data in a way where you only had to ever work with values that were multiples of 2. At that time, I had no idea what in the world he was talking about.
 
 I understand now.
 
-I don't want to implement 16bit multiplication and division while I had only had 8 bit registers (where only one of 8 registers could actually be used with the add op code) ever again.
+I don't want to implement 16-bit multiplication and division while I only had 8-bit registers (where only one of 8 registers could actually be used with the add op code) ever again.
 
 ## Debug Print Statements
 
-I don't often or ever use debuggers (outside of C/C++) as theres always a stack trace. I find that print statements are the only things I needed. Now I could have debugged by watching my memory pages while I step through my code, but I wanted my print statements. I had reserved a piece of memory to act to act as a buffer that I could write "strings" and data to. (Max string length of 16 since that much emulators normally show per line when displaying hex).
+I don't often or ever use debuggers (outside of C/C++) as there's always a stack trace. I find that print statements are the only things I needed. Now I could have debugged by watching my memory pages while I step through my code, but I wanted my print statements. I had reserved a piece of memory to act as a buffer that I could write "strings" and data to. (Max string length of 16 since that's how much emulators normally show per line when displaying hex).
 
 ## Stack Memory
 

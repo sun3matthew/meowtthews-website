@@ -11,8 +11,16 @@ export const metadata: Metadata = {
 export default function Projects() {
   const projects = getProjects().sort((a, b) => {
     // Sort by year, most recent first
-    const yearA = parseInt(a.metadata.year || '0');
-    const yearB = parseInt(b.metadata.year || '0');
+    // If year is a range like "2023 - 2025", use the second year
+    // If year is single like "2021", use that year
+    const getEndYear = (yearString: string) => {
+      if (!yearString) return 0;
+      const years = yearString.split(' - ');
+      return parseInt(years[years.length - 1]);
+    };
+    
+    const yearA = getEndYear(a.metadata.year || '0');
+    const yearB = getEndYear(b.metadata.year || '0');
     return yearB - yearA;
   });
 

@@ -3,59 +3,59 @@ import Image from "next/image";
 const artworks = [
   {
     src: "/photos/12: Childhood Fears.png",
-    caption: "Childhood Fears - An exploration of memory and emotion through visual narrative."
+    caption: "Woodblock print of slender man, experimenting with different techniques."
   },
   {
     src: "/photos/3: Visions of Ice - 3.png", 
-    caption: "Visions of Ice - 3 - Study of crystalline forms and frozen landscapes."
+    caption: "Combining printmaking, rolling and post processing algorithms."
   },
   {
     src: "/photos/6: Crow Fall.png",
-    caption: "Crow Fall - Dark imagery exploring themes of nature and mortality."
+    caption: "Experimental printing medium, printing on transparent for depth emulation."
   },
   {
     src: "/photos/8: Dreams of Home.png",
-    caption: "Dreams of Home - Nostalgic piece reflecting on place and belonging."
+    caption: "Collage of Japanese woodblock prints, of places and feelings of my home."
   },
   {
     src: "/photos/IMG_0764.PNG",
-    caption: "Digital composition exploring light and shadow relationships."
+    caption: "Fan art for a creator I used to follow."
   },
   {
     src: "/photos/IMG_1953 2.jpg",
-    caption: "Photographic study capturing natural textures and organic forms."
+    caption: "Facial study of Stalin, for use in another piece I was working on."
   },
   {
     src: "/photos/IMG_3014.JPG",
-    caption: "Visual experiment with color theory and atmospheric perspective."
+    caption: "Practice for speculative biology, trying to mimic field sketches."
   },
   {
     src: "/photos/IMG_4348.png",
-    caption: "Abstract digital artwork exploring geometric patterns and depth."
+    caption: "Seattle Green Line - Ilford HP5 Plus 400"
   },
   {
     src: "/photos/IMG_4387.png",
-    caption: "Minimalist composition focusing on form and negative space."
+    caption: "Cat up for adoption - Ilford HP5 Plus 400"
   },
   {
     src: "/photos/IMG_4393.png",
-    caption: "Contemporary digital piece examining texture and surface quality."
+    caption: "U District Farmer's Market - Ilford HP5 Plus 400"
   },
   {
     src: "/photos/IMG_4557.png",
-    caption: "Artistic study of environmental lighting and mood creation."
+    caption: "Friends Cat (I really like cats) - Ilford HP5 Plus 400"
   },
   {
     src: "/photos/IMG_4596.png",
-    caption: "Mixed media exploration of visual rhythm and compositional balance."
+    caption: "Solitude - Ilford HP5 Plus 400"
   },
   {
     src: "/photos/asdf.png",
-    caption: "Experimental work pushing boundaries of digital art techniques."
+    caption: "First attempt at a digital piece."
   },
   {
     src: "/photos/out.png",
-    caption: "Output study examining the intersection of process and final result."
+    caption: "Woodblock print of cats, trying to emulate a feeling of home and comfort."
   }
 ];
 

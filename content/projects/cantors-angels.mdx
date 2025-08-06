@@ -1,0 +1,72 @@
+---
+title: "Cantor's Angels"
+description: "Deterministic turn-based strategy game with hexagonal grids and version control system"
+tech: ["C#", "Unity", "Game Design", "Hexagonal Grids", "Turn-based Strategy"]
+status: "Archived"
+year: "2023 - 2024"
+image: "/project-images/cantors-angels-2.png"
+---
+
+# Cantor's Angels - Project - Hiatus
+
+[GitHub](https://github.com/sun3matthew/CantorsAngels)
+
+## What is this game?
+
+Cantor's Angels is a deterministic turn-based strategy game where each side attempts to capture the other side's pieces. It is played on a hexagonal board where each piece has its own movement patterns. There are multiple different pieces each with different purposes in the game. Unlike chess where there is a clear hierarchy, I wanted a "rock paper scissors" type balance where no piece was inherently better than the others.
+
+## What I found important?
+
+This was the first game where I got to work with other people to create it. It allowed me the opportunity to understand how to structure code to work with others. I also learned about version control and structuring projects in a way where we could all edit efficiently and iterate fast.
+
+This was an opportunity to put the game design knowledge I had learned through playing hundreds of games to test. Getting to implement the games I had envisioned was a fun and rewarding process, and getting feedback from testers allowed me to improve in the game design.
+
+## Artistic Direction
+
+Brutalist architecture, nuclear fallout, dystopian orange landscapes.
+
+![Yugoslavia WW2 Memorial](/project-images/memorial.jpg)
+*Yugoslavia WW2 memorial.*
+
+![Cologne Cathedral](/project-images/cologne.jpg)
+*Cologne Cathedral.*
+
+![Dune](/project-images/dune.jpg)
+*Dune.*
+
+## TODOs
+
+- Hexagonal Grid System
+- Pathfinding
+- Git
+- Turn System  
+- UI and UX
+- 2D Art
+
+## Hexagonal Grid System
+
+Through a lot of research, I was able to find different approaches to implementing a hexagonal-based game board. Through analysis of the existing methods, the axial coordinate system was a good balance of understandable while also being efficient to calculate with.
+
+For the game to function we also needed methods to convert between axial coordinates and world coordinates to be able to place the pieces in the correct positions and for the UI to function correctly when you hover or click on hexes.
+
+For each hex, we also needed to be able to find all of the neighboring hexes, both the adjacent ones and the ones a certain distance away. This was important to implement the movement patterns and for the pathfinding to function.
+
+## Pathfinding
+
+Since the pieces had different movement patterns, the pathfinding methods had to be generalized to support different types of piece movement through a single interface. A* pathfinding was implemented where the heuristic used the axial coordinate distance function. The pathfinding also had to be able to avoid enemy pieces and consider pieces as obstructions.
+
+## Git
+
+This was the first project where I had to learn git and version control. Learning how to structure commits, branching, merging, and conflict resolution was crucial for the project to be manageable between multiple developers. Setting up .gitignore properly for Unity projects and understanding what files should and shouldn't be tracked was an important learning experience.
+
+## Turn System
+
+The game needed a robust turn system to manage the flow of the game. This included tracking whose turn it was, ensuring only valid moves could be made during a player's turn, and transitioning between turns properly. The system also needed to handle special cases like captured pieces and end game conditions.
+
+## UI and UX
+
+Creating an intuitive interface for a strategy game was challenging. The UI needed to clearly show possible moves, indicate whose turn it was, and provide feedback for player actions. Special attention was paid to visual clarity and ease of use, ensuring that players could focus on strategy rather than struggling with the interface.
+
+## 2D Art
+
+All art assets were created using traditional printmaking techniques and then digitized for use in the game. This gave the game a unique hand-crafted aesthetic that stood out from typical digital art. The artistic style was designed to be clean and readable, supporting the strategic gameplay without being distracting.

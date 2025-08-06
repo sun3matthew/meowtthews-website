@@ -3,7 +3,7 @@ title: "Exhibitors"
 description: "Factory building game with elements of farming and exploration"
 tech: ["Unity", "C#", "Netcode", "Procedural Generation", "Compute Shaders"]
 status: "Released"
-year: "2022"
+year: "2022 - 2023"
 image: "/project-images/exhibitors.jpg"
 ---
 
@@ -13,7 +13,7 @@ image: "/project-images/exhibitors.jpg"
 
 ## What is this game?
 
-Factory building game with elements of farming and exploration. The game at it's core was a exercise on world building through visual elements. Originally inspired by the concept of organisms so big they they host it's own ecosystem such as the Reef Backs in Subnautica.
+Factory building game with elements of farming and exploration. The game at its core was an exercise on world building through visual elements. Originally inspired by the concept of organisms so big they host their own ecosystem such as the Reef Backs in Subnautica.
 
 ## Artistic direction
 
@@ -41,10 +41,10 @@ One thing I wanted to explore was the designs of alien biologies while being abl
 
 ## Code Architecture
 
-It was important designing a very scalable and efficient, where developing new biomes and content would be as simple as possible. To do this code was abstracted on many different levels through inheritance to support rapid development. Learning from all of my past mistakes, any modifications, even major ones such as adding Netcode did not cause any refactoring. Implementation of new content took only around 5% of the total amount of time.
+It was important to design a very scalable and efficient system, where developing new biomes and content would be as simple as possible. To do this code was abstracted on many different levels through inheritance to support rapid development. Learning from all of my past mistakes, any modifications, even major ones such as adding Netcode did not cause any refactoring. Implementation of new content took only around 5% of the total amount of time.
 The multiplayer system was also tied so closely to the game where when implementing a new entity, there would not be any extra netcode that you were required to write.
 
-Part of keeping implementation times low, was to make sure all entity code remained clean and understandable. This required me to implement a system to attempt to emulate how brains work. Internally there was a queue system that acted as a brain, where a creature could do actions based on their current state such as find food and eat. Tasks can be added at difference priories, for example evading a incoming attack would be not only be added to the front of the queue but also interrupt the current action. This allowed the coding of unit behavior much more intuitive while being abstracted enough to interact with all the other entities in the world.
+Part of keeping implementation times low was to make sure all entity code remained clean and understandable. This required me to implement a system to attempt to emulate how brains work. Internally there was a queue system that acted as a brain, where a creature could do actions based on their current state such as find food and eat. Tasks can be added at different priorities, for example evading an incoming attack would not only be added to the front of the queue but also interrupt the current action. This allowed the coding of unit behavior much more intuitive while being abstracted enough to interact with all the other entities in the world.
 
 ## Entity Serialization
 
@@ -62,12 +62,12 @@ One method of decreasing the size of save files was to instead generate as much 
 
 ## Asynchronous Chunk Generation and Serialization
 
-There are many different systems that all work together to ensure high efficiently when it comes to chunk generation/loading and serialization. These methods include chunk caching, asynchronous chunk generation, asynchronous file reading and writing, and synchronous entity generation optimized with object pooling. Adding multiplayer, this system also had to support sending entity data initialization data and receiving and injecting it. I... have buried the weeks of pain from implementing and debugging this system. I described it as trying to take care of 100 babies in a room full of power outlets without any lights while they are all holding little forks. Needless to say, it worked one day, and I've never touched it again.
+There are many different systems that all work together to ensure high efficiency when it comes to chunk generation/loading and serialization. These methods include chunk caching, asynchronous chunk generation, asynchronous file reading and writing, and synchronous entity generation optimized with object pooling. Adding multiplayer, this system also had to support sending entity data initialization data and receiving and injecting it. I... have buried the weeks of pain from implementing and debugging this system. I described it as trying to take care of 100 babies in a room full of power outlets without any lights while they are all holding little forks. Needless to say, it worked one day, and I've never touched it again.
 
 ## Asset Bundles
 
-The game is designed in a way to support many different biomes, where new biomes could be downloaded as a DLC. To support this feature, I created my own custom external library format to load in all major assets. The files get are bundled together using a script into a single binary file. On game startup, the bundle is read and unpacked then loaded into a asset manager. While this had the main purpose of being able to support DLCs, it gave me the ability to manually manage asset loading allowing me to process much of it asynchronously and multithread it.
+The game is designed in a way to support many different biomes, where new biomes could be downloaded as DLC. To support this feature, I created my own custom external library format to load in all major assets. The files are bundled together using a script into a single binary file. On game startup, the bundle is read and unpacked then loaded into an asset manager. While this had the main purpose of being able to support DLCs, it gave me the ability to manually manage asset loading allowing me to process much of it asynchronously and multithread it.
 
 ## Custom Netcode
 
-Making this game support multiplayer required me to build a multiplayer framework from ground up. This involved building a packet system with error detection and correction as well as systems to send data and receive data multiple peers. The design is a hybrid between a peer to peer and a client server approach. There exist a master host that simulates and sends all major data all clients need such as world positions. On each world, there exists a minor host that manages the logic of all entries, sending to any player that joins that world. This would allow many worlds to be loaded and a single player will never have to load more then one world at a time.
+Making this game support multiplayer required me to build a multiplayer framework from the ground up. This involved building a packet system with error detection and correction as well as systems to send data and receive data from multiple peers. The design is a hybrid between a peer-to-peer and a client-server approach. There exists a master host that simulates and sends all major data all clients need such as world positions. On each world, there exists a minor host that manages the logic of all entities, sending to any player that joins that world. This would allow many worlds to be loaded and a single player will never have to load more than one world at a time.
