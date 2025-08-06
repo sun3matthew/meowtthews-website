@@ -1,10 +1,10 @@
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app/",
-  title: "Nextfolio",
-  name: "Sirius",
-  ogImage: "/opengraph-image.png",
+  baseUrl: "https://matthew-sun.com",
+  title: "Matthew Sun",
+  name: "Matthew Sun",
+  ogImage: "/banners/grass-1.jpg",
   description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.",
+    "Matthew Sun's portfolio - UCLA Mathematics of Computation student specializing in Technical Art and Graphics Programming.",
 };
 
 export const socialLinks = {
