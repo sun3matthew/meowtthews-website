@@ -48,7 +48,7 @@ export default function Page() {
       </div>
       
       <div className="max-w-4xl mx-auto px-6 pb-16">
-        <div className="bg-white/70 backdrop-blur-sm shadow-xl p-12 border border-white/20">
+  <div className="bg-white/70 backdrop-blur-sm shadow-md p-12 border border-white/20">
           <div className="text-center mb-12">
             <h1 className="text-3xl font-light text-slate-700 mb-4 tracking-wide">Hello, I'm Matthew!</h1>
             <div className="w-24 h-0.5 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto"></div>
@@ -80,7 +80,7 @@ export default function Page() {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 pb-16">
-        <div className="bg-white/70 backdrop-blur-sm shadow-xl p-8 border border-white/20 text-center">
+  <div className="bg-white/70 backdrop-blur-sm shadow-md p-8 border border-white/20 text-center">
           <div className="text-slate-600 text-lg italic leading-relaxed">
             {currentQuote}
           </div>

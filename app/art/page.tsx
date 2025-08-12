@@ -69,7 +69,7 @@ export default function ArtPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {artworks.map((artwork, index) => (
-          <div key={index} className="bg-white/70 backdrop-blur-sm shadow-xl overflow-hidden border border-white/20 hover:shadow-2xl transition-shadow duration-300">
+          <div key={index} className="bg-white/70 backdrop-blur-sm shadow-md overflow-hidden border border-white/20 hover:shadow-md transition-shadow duration-300">
             <div className="relative aspect-square">
               <Image
                 src={artwork.src}

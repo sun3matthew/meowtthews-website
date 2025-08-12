@@ -76,7 +76,7 @@ export default function PhotoSlideshow() {
   };
 
   return (
-    <div className="slideshow-container max-w-5xl relative mx-auto mb-16 bg-white shadow-lg overflow-hidden">
+  <div className="slideshow-container max-w-5xl relative mx-auto mb-16 bg-white shadow-md overflow-hidden">
       <div className="slide-container relative">
         <Link href={slides[currentSlide].link} className="block">
           <Image

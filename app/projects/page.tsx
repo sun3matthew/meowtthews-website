@@ -36,7 +36,7 @@ export default function Projects() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group block bg-white/70 backdrop-blur-sm shadow-xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 no-underline decoration-0"
+            className="group block bg-white/70 backdrop-blur-sm shadow-md overflow-hidden border border-white/20 hover:shadow-md transition-all duration-300 no-underline decoration-0"
             style={{ textDecoration: 'none' }}
           >
             <div className="flex flex-col md:flex-row">
