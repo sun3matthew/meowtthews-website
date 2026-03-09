@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { socialLinks } from "./lib/config";
-import PhotoSlideshow from "./components/photo-slideshow";
+import PhotoGallery from "./components/photo-slideshow";
 import { useState, useEffect } from "react";
 
 const quotes = [
@@ -44,35 +44,35 @@ export default function Page() {
   return (
     <>
       <div className="mt-8 mb-12">
-        <PhotoSlideshow />
+        <PhotoGallery />
       </div>
       
       <div className="max-w-4xl mx-auto px-6 pb-16">
   <div className="bg-white/70 backdrop-blur-sm shadow-md p-12 border border-white/20">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-light text-slate-700 mb-4 tracking-wide">Hello, I'm Matthew!</h1>
+            <h1 className="text-3xl font-light text-slate-700 mb-4 tracking-wide">Hello, I'm Matthew Sun!</h1>
             <div className="w-24 h-0.5 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto"></div>
           </div>
           
           <div className="space-y-6 text-slate-600 leading-relaxed">
             <p>
-              I am a student at <a href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">UCLA</a> studying Mathematics of Computation (ex Art Major), graduating December of 2025. I have been making games for the past 6 years, specializing in Technical Art and Graphics Programming.
+              I have been <a href="https://store.steampowered.com/dev/suncats" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">making games</a> for the past 6 years, specializing in Technical Art and Graphics Programming. Shipped 3 games to 60,000+ players, with 3 more coming soon.
             </p>
             <p>
               I was previously an intern with the <a href="https://www.thesphere.com/" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">Las Vegas Sphere</a> where I procedurally create art and help support other artists by making tools.
             </p>
             <p>
-              My areas of interest include real-time rendering of flora and fauna such as grass, trees and butterflies. I also enjoy building custom tools and pipelines to build a smooth creative medium allowing artists to focus on their craft rather than the technical details.
+              I studied Mathematics and Computer Science at <a href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">UCLA</a>.
+            </p>
+            <p>
+              My main skill set is building custom tools and pipelines to build a smooth creative medium allowing artists to focus on their craft rather than the technical details. Outside of this I also love building custom shaders and solutions for computer graphics.
             </p>
             <p className="mb-4">My hobbies outside of my work are spread pretty thin, but they include:</p>
             <div className="space-y-2 ml-4">
               <div>• Japanese printmaking (my retirement hobby)</div>
-              <div>• Drawing with ink, specifically with <a href="https://en.wikipedia.org/wiki/Bic_Cristal" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 underline decoration-rose-200">this favorite pen</a></div>
               <div>• Brewing (lagers)</div>
               <div>• Dendrology (tree classification)</div>
-              <div>• Gameboy ROM Hacking (specifically Pokemon Crystal written in Assembly)</div>
               <div>• Jewelry making (specializing in silver)</div>
-              <div>• Rock climbing (V5)</div>
               <div>• Running (4:58 mile at my peak)</div>
             </div>
           </div>

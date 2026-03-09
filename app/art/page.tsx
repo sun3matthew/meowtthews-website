@@ -2,6 +2,46 @@ import Image from "next/image";
 
 const artworks = [
   {
+    src: "/photos/DSCF1279.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF1984.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2126.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2140.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2202.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2412.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2596.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2620.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF2765.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
+    src: "/photos/DSCF3390.JPG",
+    caption: "Fujifilm XE-1"
+  },
+  {
     src: "/photos/12: Childhood Fears.png",
     caption: "Woodblock print of slender man, experimenting with different techniques."
   },
@@ -69,20 +109,17 @@ export default function ArtPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {artworks.map((artwork, index) => (
-          <div key={index} className="bg-white/70 backdrop-blur-sm shadow-md overflow-hidden border border-white/20 hover:shadow-md transition-shadow duration-300">
-            <div className="relative aspect-square">
-              <Image
-                src={artwork.src}
-                alt={artwork.caption}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-            <div className="p-4">
-              <p className="text-slate-600 text-sm leading-relaxed">
-                {artwork.caption}
-              </p>
+          <div key={index} className="group relative overflow-hidden bg-white shadow-md aspect-square">
+            <Image
+              src={artwork.src}
+              alt={artwork.caption}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300" />
+            <div className="absolute inset-0 flex items-end p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-xs leading-relaxed">{artwork.caption}</p>
             </div>
           </div>
         ))}
