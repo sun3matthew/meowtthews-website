@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
-  let project = getProjects().find((project) => project.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  let project = getProjects().find((project) => project.slug === slug);
   if (!project) {
     return;
   }
@@ -48,8 +49,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function Project({ params }) {
-  let project = getProjects().find((project) => project.slug === params.slug);
+export default async function Project({ params }) {
+  const { slug } = await params;
+  let project = getProjects().find((project) => project.slug === slug);
 
   if (!project) {
     notFound();
