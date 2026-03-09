@@ -67,7 +67,7 @@ const items = [
 export default function PhotoGallery() {
   return (
     <div className="max-w-7xl mx-auto px-2 mb-16">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {items.map((item, index) => (
           <div key={index} className="group relative overflow-hidden bg-white shadow-md aspect-video">
             <Link href={item.link} className="block w-full h-full">
