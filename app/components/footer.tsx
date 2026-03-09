@@ -15,7 +15,7 @@ const YEAR = new Date().getFullYear();
 
 function SocialLink({ href, icon: Icon }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-rose-500 transition-colors duration-300">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors duration-300">
       <Icon />
     </a>
   );

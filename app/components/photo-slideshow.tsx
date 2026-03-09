@@ -18,16 +18,16 @@ const items = [
     link: '/projects/sphere-tools'
   },
   {
-    src: '/banners/Cantors Screenshot-1.png',
-    alt: "Cantor's Angels - Cloud Shaders",
-    caption: 'Custom Worley-based volumetric pixel cloud shaders. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
-    link: '/projects/cantors-angels'
+    src: '/banners/sphere-new-years-2.png',
+    alt: 'Sphere Tools - Environment',
+    caption: 'One of many projects utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
+    link: '/projects/sphere-tools'
   },
   {
-    src: '/banners/Cantors Screenshot-2.png',
-    alt: "Cantor's Angels - Graph Visualization",
-    caption: 'Compute shader drawn graph visualization with pixel art portraits. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
-    link: '/projects/cantors-angels'
+    src: '/banners/sphere-drone.jpg',
+    alt: 'Sphere Tools',
+    caption: 'A <a href="/projects/sphere-tools">drone pre-visualization tool</a> I built for our digital twin, converting drone flight files to Niagara particle systems.',
+    link: '/projects/sphere-tools'
   },
   {
     src: '/banners/grass-3.png',
@@ -54,16 +54,16 @@ const items = [
     link: '#'
   },
   {
-    src: '/banners/sphere-new-years-2.png',
-    alt: 'Sphere Tools - Environment',
-    caption: 'One of many projects utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
-    link: '/projects/sphere-tools'
+    src: '/banners/Cantors Screenshot-1.png',
+    alt: "Cantor's Angels - Cloud Shaders",
+    caption: 'Custom Worley-based volumetric pixel cloud shaders. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
+    link: '/projects/cantors-angels'
   },
   {
-    src: '/banners/sphere-drone.jpg',
-    alt: 'Sphere Tools',
-    caption: 'A <a href="/projects/sphere-tools">drone pre-visualization tool</a> I built for our digital twin, converting drone flight files to Niagara particle systems.',
-    link: '/projects/sphere-tools'
+    src: '/banners/Cantors Screenshot-2.png',
+    alt: "Cantor's Angels - Graph Visualization",
+    caption: 'Compute shader drawn graph visualization with pixel art portraits. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
+    link: '/projects/cantors-angels'
   },
 ];
 

@@ -28,7 +28,7 @@ export default function Projects() {
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-light text-slate-700 mb-4 tracking-wide">Projects</h1>
-        <div className="w-32 h-0.5 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto"></div>
+        <div className="w-32 h-0.5 bg-gradient-to-r from-blue-300 to-blue-300 mx-auto"></div>
       </div>
 
       <div className="space-y-8">
@@ -53,7 +53,7 @@ export default function Projects() {
               )}
               <div className="flex-1 p-6 md:p-8">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-medium text-slate-700 group-hover:text-rose-600 transition-colors">
+                  <h3 className="text-2xl font-medium text-slate-700 group-hover:text-blue-600 transition-colors">
                     {project.metadata.title}
                   </h3>
                   <span className="text-sm text-slate-500 font-medium ml-4">

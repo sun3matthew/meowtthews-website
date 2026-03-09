@@ -148,12 +148,12 @@ pre, code, .mono {
 
 .prose a {
   @apply font-normal transition-all underline decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
-  color: red;
+  color: #3b82f6;
 }
 
 .prose a:hover {
   @apply dark:decoration-neutral-400 decoration-neutral-600;
-  color: gray;
+  color: #2563eb;
   text-decoration: underline;
 }
 
@@ -205,13 +205,13 @@ pre, code, .mono {
 
 /* === Links === */
 a {
-  color: red;
+  color: #3b82f6;
   text-decoration: none;
   text-underline-offset: 2px;
 }
 
 a:hover {
-  color: gray;
+  color: #2563eb;
   text-decoration: underline;
 }
 
@@ -220,7 +220,7 @@ a.nav {
 }
 
 a.nav:hover {
-  color: red;
+  color: #3b82f6;
   text-decoration: underline;
 }
 

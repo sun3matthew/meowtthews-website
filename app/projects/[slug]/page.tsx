@@ -54,7 +54,7 @@ export default async function Project({ params }) {
   let project = getProjects().find((project) => project.slug === slug);
 
   if (!project) {
-    notFound();
+    return notFound();
   }
 
   return (
@@ -90,7 +90,7 @@ export default async function Project({ params }) {
       )}
 
   <div className="bg-white/70 backdrop-blur-sm shadow-md p-8 md:p-12 border border-white/20">
-        <article className="prose prose-slate max-w-none prose-headings:text-slate-700 prose-p:text-slate-600 prose-p:leading-relaxed prose-a:text-rose-500 prose-a:no-underline hover:prose-a:text-rose-600 prose-strong:text-slate-700 prose-code:text-slate-700 prose-code:bg-slate-100 prose-pre:bg-slate-50 prose-pre:border prose-pre:border-slate-200">
+        <article className="prose prose-slate max-w-none prose-headings:text-slate-700 prose-p:text-slate-600 prose-p:leading-relaxed prose-a:text-blue-500 prose-a:no-underline hover:prose-a:text-blue-600 prose-strong:text-slate-700 prose-code:text-slate-700 prose-code:bg-slate-100 prose-pre:bg-slate-50 prose-pre:border prose-pre:border-slate-200">
           <CustomMDX source={project.content} />
         </article>
       </div>

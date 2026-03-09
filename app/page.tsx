@@ -51,18 +51,18 @@ export default function Page() {
   <div className="bg-white/70 backdrop-blur-sm shadow-md p-12 border border-white/20">
           <div className="text-center mb-12">
             <h1 className="text-3xl font-light text-slate-700 mb-4 tracking-wide">Hello, I'm Matthew Sun!</h1>
-            <div className="w-24 h-0.5 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto"></div>
+            <div className="w-24 h-0.5 bg-gradient-to-r from-blue-300 to-blue-500 mx-auto"></div>
           </div>
           
           <div className="space-y-6 text-slate-600 leading-relaxed">
             <p>
-              I have been <a href="https://store.steampowered.com/dev/suncats" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">making games</a> for the past 6 years, specializing in Technical Art and Graphics Programming. Shipped 3 games to 60,000+ players, with 3 more coming soon.
+              I have been <a href="https://store.steampowered.com/dev/suncats" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 font-medium transition-colors duration-200 underline decoration-blue-200 underline-offset-2">making games</a> for the past 6 years, specializing in Technical Art and Graphics Programming. Shipped 3 games to 60,000+ players, with 3 more coming soon.
             </p>
             <p>
-              I was previously an intern with the <a href="https://www.thesphere.com/" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">Las Vegas Sphere</a> where I procedurally create art and help support other artists by making tools.
+              I was previously an intern with the <a href="https://www.thesphere.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 font-medium transition-colors duration-200 underline decoration-blue-200 underline-offset-2">Las Vegas Sphere</a> where I procedurally create art and help support other artists by making tools.
             </p>
             <p>
-              I studied Mathematics and Computer Science at <a href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer" className="text-rose-500 hover:text-rose-600 font-medium transition-colors duration-200 underline decoration-rose-200 underline-offset-2">UCLA</a>.
+              I studied Mathematics and Computer Science at <a href="https://www.ucla.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 font-medium transition-colors duration-200 underline decoration-blue-200 underline-offset-2">UCLA</a>.
             </p>
             <p>
               My main skill set is building custom tools and pipelines to build a smooth creative medium allowing artists to focus on their craft rather than the technical details. Outside of this I also love building custom shaders and solutions for computer graphics.

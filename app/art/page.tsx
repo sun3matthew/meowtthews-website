@@ -104,7 +104,7 @@ export default function ArtPage() {
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-light text-slate-700 mb-4 tracking-wide">Assorted Images</h1>
-        <div className="w-32 h-0.5 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto"></div>
+        <div className="w-32 h-0.5 bg-gradient-to-r from-blue-300 to-blue-500 mx-auto"></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

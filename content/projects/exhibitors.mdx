@@ -28,17 +28,6 @@ One thing I wanted to explore was the designs of alien biologies while being abl
 ![Sketch of an alien creature in the game](/project-images/alien-creature-sketch.jpg)
 *Sketch of an alien creature in the game.*
 
-## TODOs
-
-- Code Architecture
-- Entity Serialization
-- World Unloading Optimizations
-- Procedural animations
-- Compute shaders world generation
-- Asynchronous chunk generation and serialization
-- Asset bundles
-- Custom Netcode
-
 ## Code Architecture
 
 It was important to design a very scalable and efficient system, where developing new biomes and content would be as simple as possible. To do this code was abstracted on many different levels through inheritance to support rapid development. Learning from all of my past mistakes, any modifications, even major ones such as adding Netcode did not cause any refactoring. Implementation of new content took only around 5% of the total amount of time.
