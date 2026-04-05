@@ -48,16 +48,16 @@ const items = [
     link: '/projects/destined-to-die'
   },
   {
-    src: '/banners/Teaser-Game.png',
+    src: '/Teaser2.webp',
     alt: 'Multiplayer Game Teaser',
     caption: 'Early screenshot of a multiplayer game I\'m working on, porting the grass renderer into Unity and adding lights and shadows.',
     link: '#'
   },
   {
-    src: '/banners/sphere-new-years-2.png',
-    alt: 'Sphere Tools - Environment',
-    caption: 'One of many projects utilizing a suite of tools I built for the <a href="/projects/sphere-tools">Sphere</a>, to help fix and remove seams for 360° videos.',
-    link: '/projects/sphere-tools'
+    src: '/dog.webp',
+    alt: 'UE5 Vine Foliage Tool',
+    caption: 'A UE5 vine foliage tool that simulates realistic vine growth around the contours of objects.',
+    link: '#'
   },
   {
     src: '/banners/sphere-drone.jpg',
