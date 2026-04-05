@@ -48,13 +48,13 @@ const items = [
     link: '/projects/destined-to-die'
   },
   {
-    src: '/Teaser2.webp',
+    src: '/banners/Teaser2.webp',
     alt: 'Multiplayer Game Teaser',
     caption: 'Early screenshot of a multiplayer game I\'m working on, porting the grass renderer into Unity and adding lights and shadows.',
     link: '#'
   },
   {
-    src: '/dog.webp',
+    src: '/banners/dog.webp',
     alt: 'UE5 Vine Foliage Tool',
     caption: 'A UE5 vine foliage tool that simulates realistic vine growth around the contours of objects.',
     link: '#'
