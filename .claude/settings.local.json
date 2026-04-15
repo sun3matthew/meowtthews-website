@@ -31,7 +31,9 @@
       "Bash(cwebp -q 85 convoy_column-9_high_orbit_02_pred.png -o convoy_column-9_high_orbit_02_pred.webp)",
       "Bash(rm convoy_column-9_high_orbit_02_pred.png)",
       "Bash(cwebp -q 85 \"oblique_02_degraded copy.png\" -o oblique_02_degraded.webp)",
-      "Bash(rm \"oblique_02_degraded copy.png\")"
+      "Bash(rm \"oblique_02_degraded copy.png\")",
+      "Bash(find /Users/mattsun/meowtthews-website -maxdepth 1 -name \"package.json\" -exec cat {} \\\\;)",
+      "Bash(npm run *)"
     ]
   }
 }

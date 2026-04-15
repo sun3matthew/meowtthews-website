@@ -160,7 +160,7 @@ export default async function Project({ params }) {
         <div className="flex-1 min-w-0 space-y-6">
           {sections.map((section, i) => (
             <div key={i} className="bg-white/70 backdrop-blur-sm shadow-md p-8 md:p-12 border border-white/20">
-              <article className="prose prose-slate max-w-none prose-headings:text-slate-700 prose-p:text-slate-600 prose-p:leading-relaxed prose-a:text-blue-500 prose-a:no-underline hover:prose-a:text-blue-600 prose-strong:text-slate-700 prose-code:text-slate-700 prose-code:bg-slate-100 prose-pre:bg-slate-50 prose-pre:border prose-pre:border-slate-200">
+              <article className="prose prose-slate max-w-none prose-headings:text-slate-700 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-a:text-blue-500 prose-a:no-underline hover:prose-a:text-blue-600 prose-strong:text-slate-700 prose-code:text-slate-700 prose-code:bg-slate-100 prose-pre:bg-slate-50 prose-pre:border prose-pre:border-slate-200">
                 <CustomMDX source={section} />
               </article>
             </div>
