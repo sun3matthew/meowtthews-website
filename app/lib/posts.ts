@@ -11,6 +11,7 @@ type Metadata = {
   year?: string;
   tech?: string;
   status?: string;
+  type?: string;
 };
 
 function parseFrontmatter(fileContent: string) {

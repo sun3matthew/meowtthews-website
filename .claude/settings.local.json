@@ -1,7 +1,37 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pnpm build)"
+      "Bash(pnpm build)",
+      "Bash(open http://localhost:3000/projects/the-lonely-tree)",
+      "Bash(grep -n '^# ' /Users/mattsun/meowtthews-website/content/projects/*.mdx)",
+      "Bash(grep -rn '^title\\\\|^status' /Users/mattsun/meowtthews-website/content/projects/*.mdx)",
+      "Bash(pnpm add *)",
+      "Bash(ls /Users/mattsun/meowtthews-website/public/*synthgen*)",
+      "Bash(ls -la /Users/mattsun/meowtthews-website/public/banners/synthgen-*.png)",
+      "Bash(git -C /Users/mattsun/meowtthews-website status --short)",
+      "Bash(brew list *)",
+      "Bash(cwebp -q 85 \"convoy_column-25_rand_oblique_00_pred.png\" -o \"convoy_column-25_rand_oblique_00_pred.webp\")",
+      "Bash(cwebp -q 85 \"forest_patrol-1_rand_oblique_03_pred.png\" -o \"forest_patrol-1_rand_oblique_03_pred.webp\")",
+      "Bash(ls -la *.webp)",
+      "Bash(cwebp -q 85 oblique_02_degraded.png -o oblique_02_degraded.webp)",
+      "Bash(rm oblique_02_degraded.png)",
+      "Bash(cwebp -q 85 degraded_v3.png -o degraded_v3.webp)",
+      "Bash(rm degraded_v3.png)",
+      "Bash(cwebp -q 85 oblique_01_degraded.png -o oblique_01_degraded.webp)",
+      "Bash(rm oblique_01_degraded.png)",
+      "Bash(cwebp -q 85 \"oblique_01_degraded copy.png\" -o \"oblique_01_degraded_copy.webp\")",
+      "Bash(rm \"oblique_01_degraded copy.png\")",
+      "Bash(cwebp -q 85 high_orbit_03.png -o high_orbit_03.webp)",
+      "Bash(rm high_orbit_03.png high_orbit_02.webp)",
+      "Bash(cwebp -q 85 occupied_village-4_high_orbit_01_pred.png -o occupied_village-4_high_orbit_01_pred.webp)",
+      "Bash(cwebp -q 85 trench_network-7_oblique_05_pred.png -o trench_network-7_oblique_05_pred.webp)",
+      "Bash(rm occupied_village-4_high_orbit_01_pred.png trench_network-7_oblique_05_pred.png)",
+      "Bash(ls /Users/mattsun/meowtthews-website/public/project-images/SynthGen/oblique_02*)",
+      "Bash(cwebp -q 85 oblique_02_degraded.png -o oblique_02_degraded_v2.webp)",
+      "Bash(cwebp -q 85 convoy_column-9_high_orbit_02_pred.png -o convoy_column-9_high_orbit_02_pred.webp)",
+      "Bash(rm convoy_column-9_high_orbit_02_pred.png)",
+      "Bash(cwebp -q 85 \"oblique_02_degraded copy.png\" -o oblique_02_degraded.webp)",
+      "Bash(rm \"oblique_02_degraded copy.png\")"
     ]
   }
 }

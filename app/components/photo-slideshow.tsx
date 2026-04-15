@@ -2,7 +2,31 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
+
+function parseCaption(caption: string): ReactNode[] {
+  const parts: ReactNode[] = [];
+  const regex = /<a href="[^"]*">(.*?)<\/a>/g;
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+
+  while ((match = regex.exec(caption)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(caption.slice(lastIndex, match.index));
+    }
+    parts.push(
+      <span key={key++} className="text-blue-400">
+        {match[1]}
+      </span>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < caption.length) {
+    parts.push(caption.slice(lastIndex));
+  }
+  return parts;
+}
 
 const items = [
   {
@@ -18,16 +42,16 @@ const items = [
     link: '/projects/sphere-tools'
   },
   {
-    src: '/banners/Cantors Screenshot-1.png',
-    alt: "Cantor's Angels - Cloud Shaders",
-    caption: 'Custom Worley-based volumetric pixel cloud shaders. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
-    link: '/projects/cantors-angels'
+    src: '/project-images/SynthGen/oblique_02_degraded.webp',
+    alt: 'SynthGen - Procedural Forest Patrol',
+    caption: 'A procedurally generated trench network scene using <a href="/projects/synthgen">SynthGen</a>, a synthetic data pipeline built on UE5.',
+    link: '/projects/synthgen'
   },
   {
-    src: '/banners/Cantors Screenshot-2.png',
-    alt: "Cantor's Angels - Graph Visualization",
-    caption: 'Compute shader drawn graph visualization with pixel art portraits. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
-    link: '/projects/cantors-angels'
+    src: '/project-images/SynthGen/convoy_column-25_rand_oblique_00_pred.webp',
+    alt: 'SynthGen - Automatic Annotations',
+    caption: 'A procedurally generated snowy convoy scene using <a href="/projects/synthgen">SynthGen</a>, a synthetic data pipeline built on UE5.',
+    link: '/projects/synthgen'
   },
   {
     src: '/banners/grass-3.png',
@@ -42,10 +66,22 @@ const items = [
     link: '/projects/the-lonely-tree'
   },
   {
-    src: '/banners/destined-to-die.jpg',
-    alt: 'Destined to Die',
-    caption: 'My first big game where I learned the fundamentals of game development and discovered my undying love for game development. <a href="/projects/destined-to-die">Destined to Die</a>.',
-    link: '/projects/destined-to-die'
+    src: '/banners/Cantors Screenshot-1.png',
+    alt: "Cantor's Angels - Cloud Shaders",
+    caption: 'Custom Worley-based volumetric pixel cloud shaders. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
+    link: '/projects/cantors-angels'
+  },
+  {
+    src: '/banners/Cantors Screenshot-2.png',
+    alt: "Cantor's Angels - Graph Visualization",
+    caption: 'Compute shader drawn graph visualization with pixel art portraits. <a href="/projects/cantors-angels">Cantor\'s Angels</a>.',
+    link: '/projects/cantors-angels'
+  },
+  {
+    src: '/banners/dog.webp',
+    alt: 'UE5 Vine Foliage Tool',
+    caption: 'A UE5 vine foliage tool that simulates realistic vine growth around the contours of objects.',
+    link: '#'
   },
   {
     src: '/banners/Teaser2.webp',
@@ -54,10 +90,10 @@ const items = [
     link: '#'
   },
   {
-    src: '/banners/dog.webp',
-    alt: 'UE5 Vine Foliage Tool',
-    caption: 'A UE5 vine foliage tool that simulates realistic vine growth around the contours of objects.',
-    link: '#'
+    src: '/banners/destined-to-die.jpg',
+    alt: 'Destined to Die',
+    caption: 'My first big game where I learned the fundamentals of game development and discovered my undying love for game development. <a href="/projects/destined-to-die">Destined to Die</a>.',
+    link: '/projects/destined-to-die'
   },
   {
     src: '/banners/sphere-drone.jpg',
@@ -102,10 +138,9 @@ export default function PhotoGallery() {
                 <div className={`absolute inset-0 transition-all duration-300 ${isTapped ? 'bg-black/50' : 'bg-black/0 group-hover:bg-black/50'}`} />
                 <div
                   className={`absolute inset-0 flex items-end p-3 transition-opacity duration-300 ${isTapped ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
-                  dangerouslySetInnerHTML={{
-                    __html: `<p class="text-white text-xs leading-relaxed">${item.caption}</p>`
-                  }}
-                />
+                >
+                  <p className="text-white text-xs leading-relaxed">{parseCaption(item.caption)}</p>
+                </div>
               </Link>
             </div>
           );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
+import rehypeShiki from "@shikijs/rehype";
 import { TweetComponent } from "./tweet";
 import { CaptionComponent } from "./caption";
 import { YouTubeComponent } from "./youtube";
@@ -31,6 +32,9 @@ function RoundedImage(props) {
 }
 
 function Code({ children, ...props }) {
+  if (typeof children !== "string") {
+    return <code {...props}>{children}</code>;
+  }
   let codeHTML = highlight(children);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
@@ -127,7 +131,10 @@ export function CustomMDX(props) {
       options={{
         mdxOptions: {
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [
+            rehypeKatex,
+            [rehypeShiki, { theme: "github-light" }],
+          ],
         },
         blockJS: false,
         blockDangerousJS: false,
