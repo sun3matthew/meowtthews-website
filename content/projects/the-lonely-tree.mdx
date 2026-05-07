@@ -1,7 +1,7 @@
 ---
 title: "The Lonely Tree"
-description: "OpenGL game engine development with grass rendering systems and artistic direction"
-tech: ["OpenGL", "C++", "GLSL", "Art Direction"]
+description: "Game engine development with grass rendering systems and artistic direction"
+tech: ["C++", "GLSL", "Art Direction"]
 status: "WIP"
 type: "Project"
 year: "2024 - 2025"
@@ -14,9 +14,9 @@ The game is less of a game and more of a "experience". I don't plan to add any g
 
 ## Why?
 
-An exploration outside the world of Unity 2D pixel art games. Applying what I had learned from my intro to computer graphics course and running with it while diving even deeper. I have always wanted to build my own game engine from scratch for many reasons and now this is my chance to do so. I spent quite a bit of time trying to figure out how "low-level" I wanted to go, in the beginning I was going to go with bgfx but I wanted to really learn how things work all the way down to the GPU. Therefore my immediate new thought was to build my own version of OpenGL. Then I realized I am not there yet and actually wanted to be able to render a black screen within this year so I decided to settle with OpenGL.
+An exploration outside the world of Unity 2D pixel art games. Applying what I had learned from my intro to computer graphics course and running with it while diving even deeper. I have always wanted to build my own game engine from scratch for many reasons and now this is my chance to do so. I spent quite a bit of time trying to figure out how "low-level" I wanted to go, in the beginning I was going to go with bgfx but I wanted to really learn how things work all the way down to the GPU.
 
-The plan was to get through a couple chapters of [LearnOpenGL](https://learnopengl.com) while learning how to correctly set up a build system and project structure. Then from there I would just go for it and try to build out a game engine derived from my understanding of how the Unity game engine worked while heavily simplifying it. Then take as much time as I needed to experiment with creating a visually stunning scene that was also able to be run on average laptop. Finally I would spend the time crafting the rest of the content for the game, make sure it continues to align with my artistic direction. Hey, I'm an artist too at heart.
+The plan was to learn how to correctly set up a build system and project structure. Then from there I would just go for it and try to build out a game engine derived from my understanding of how the Unity game engine worked while heavily simplifying it. Then take as much time as I needed to experiment with creating a visually stunning scene that was also able to be run on average laptop. Finally I would spend the time crafting the rest of the content for the game, make sure it continues to align with my artistic direction. Hey, I'm an artist too at heart.
 
 ## Artistic direction
 
@@ -29,12 +29,6 @@ The first is the feeling of hiking alone and walking through an endless grass me
 
 ![The field of reeds from Moon Knight](/project-images/aaru.webp)
 *The field of reeds from Moon Knight.*
-
-## OpenGL Project Setup
-
-I have learned over time how to setup a project structure according to industry standards. But I have never had to setup one that was like this. I'm going to need to take some time continuing to learn the industry standards and what works the best for my project. Currently the build system uses cmake and the project structure is derived from the different project structures I've seen from other github repos. I think at this point the project structure and build system has mostly stabilized to a point where I'm using git submodules and no longer need to rebase my mistakes away.
-
-The OpenGL project was fairly easy to follow, re-learning how to debug seg-faults was "fun" and it was even more "fun" learning how to debug shader code. One thing that I really didn't like about OpenGL was that it used AssImp for 3D model loading and it was too heavy for me. I ended up using tinyGLTF instead. It was a bit of effort learning how to use tinyGLTF instead and converting from PBR to Blinn-phong.
 
 ## Game Engine Creation
 
