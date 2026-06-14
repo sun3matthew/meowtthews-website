@@ -1,5 +1,10 @@
 import { getTweet } from "react-tweet/api";
-import { EmbeddedTweet, TweetNotFound, type TweetProps } from "react-tweet";
+import {
+  EmbeddedTweet,
+  TweetNotFound,
+  enrichTweet,
+  type TweetProps,
+} from "react-tweet";
 import "./tweet.css";
 
 const TweetContent = async ({ id, components, onError }: TweetProps) => {
@@ -15,7 +20,19 @@ const TweetContent = async ({ id, components, onError }: TweetProps) => {
       })
     : undefined;
 
-  if (!tweet) {
+  // Validate the tweet by running the same transform EmbeddedTweet does
+  // internally. A malformed/unparseable tweet would otherwise throw during
+  // render and crash the static build, escaping the catch above.
+  if (tweet) {
+    try {
+      enrichTweet(tweet);
+    } catch (err) {
+      console.error(err);
+      error = error || err;
+    }
+  }
+
+  if (!tweet || error) {
     const NotFound = components?.TweetNotFound || TweetNotFound;
     return <NotFound error={error} />;
   }
