@@ -42,18 +42,6 @@ const items = [
     link: '/projects/sphere-tools'
   },
   {
-    src: '/project-images/SynthGen/oblique_02_degraded.webp',
-    alt: 'SynthGen - Procedural Forest Patrol',
-    caption: 'A procedurally generated trench network scene using <a href="/projects/synthgen">SynthGen</a>, a synthetic data pipeline built on UE5.',
-    link: '/projects/synthgen'
-  },
-  {
-    src: '/project-images/SynthGen/convoy_column-25_rand_oblique_00_pred.webp',
-    alt: 'SynthGen - Automatic Annotations',
-    caption: 'A procedurally generated snowy convoy scene using <a href="/projects/synthgen">SynthGen</a>, a synthetic data pipeline built on UE5.',
-    link: '/projects/synthgen'
-  },
-  {
     src: '/banners/grass-3.png',
     alt: 'Environmental Graphics',
     caption: 'A screenshot from my <a href="/projects/the-lonely-tree">game</a> built in my custom game engine, showcasing a field of highly dynamic grass and flowers rendered in real-time.',
